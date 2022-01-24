@@ -1,0 +1,285 @@
+.main-form {
+    padding: 0 60px;
+
+    @include breakpointMin($breakpoint-huge) {
+        padding: 0;
+    }
+
+    @include breakpoint($breakpoint-xl) {
+        padding: 0 40px;
+    }
+
+    @include breakpoint($mobile-l) {
+        padding: 0 20px;
+    }
+}
+
+
+
+.form {
+    padding: 65px 0 80px;
+
+
+    @include breakpoint($mobile-l) {
+        padding-bottom: 50px;
+    }
+
+    &-inner {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 100px;
+
+
+        @include breakpoint($breakpoint-sl) {
+            margin-bottom: 80px;
+        }
+
+        @include breakpoint($mobile-l) {
+            justify-content: center;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__title {
+        margin-bottom: 120px;
+
+        font-size: 24px;
+        line-height: 29px;
+        text-align: center;
+
+        position: relative;
+
+
+        @include breakpoint($breakpoint-sl) {
+            margin-bottom: 80px;
+        }
+
+        @include breakpoint($tablet) {
+            font-size: 22px;
+            line-height: 26px;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 60px;
+
+            font-size: 18px;
+            line-height: 22px;
+        }
+
+
+        &::before {
+            content: '';
+            width: 257px;
+            height: 2px;
+
+            background-color: $orange;
+
+            position: absolute;
+            top: -10px;
+            left: 50%;
+
+            transform: translateX(-50%);
+
+
+            @include breakpoint($mobile-l) {
+                display: none;
+            }
+        }
+    }
+
+    &__group {
+        width: 100%;
+        max-width: 400px;
+
+        position: relative;
+
+
+        @include breakpoint($breakpoint-3xl) {
+            max-width: 30%;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 50px;
+            max-width: 90%;
+        }
+
+
+
+        &:last-of-type {
+            max-width: 100%;
+            margin-top: 120px;
+
+            @include breakpoint($tablet) {
+                width: 100%;
+            }
+
+            @include breakpoint($mobile-l) {
+                width: 90%;
+                margin-top: 0;
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    &__control {
+        display: block;
+        width: 100%;
+        padding: 0 0 10px;
+
+        font-family: $font-inter;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.04em;
+
+        border-width: 0 0 1px;
+        border-style: solid;
+        border-color: $white;
+        border-radius: 0;
+        box-shadow: none;
+
+        transition: $transition;
+
+
+        @include breakpoint($mobile-l) {
+            padding-bottom: 5px;
+
+            font-size: 16px;
+        }
+
+
+
+        &:last-of-type {
+            height: 30px;
+        }
+        &::placeholder {
+            color: #636363;
+
+        }
+
+        &:focus + .form__line {
+            width: 100%;
+        }
+    }
+
+    &__line {
+        width: 0;
+        height: 1px;
+
+        background-color: #636363;
+
+        transition: $transition;
+
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+
+
+
+    // Form Contact
+    &--contact {
+        padding-bottom: 0;
+
+
+        .form-inner {
+            padding: 0 50px 140px;
+            margin: 0;
+
+            position: relative;
+        }
+
+        .form__group {
+            width: 100%;
+            margin-bottom: 50px;
+
+
+            &:last-of-type {
+                margin: 0;
+
+
+
+                @include breakpoint($mobile-l) {
+                    width: 90%;
+                }
+            }
+        }
+    }
+
+
+
+    // Form--fullscreen
+    &--fullscreen {
+        position: relative;
+
+
+        .form__title {
+            margin-bottom: 120px;
+
+            @include title;
+            text-align: left;
+
+
+            &::before {
+                display: none;
+            }
+
+
+            @include breakpoint($breakpoint-xl) {
+                font-size: 32px;
+                line-height: 36px;
+            }
+
+            @include breakpoint($breakpoint-l) {
+                font-size: 28px;
+                line-height: 32px;
+                text-align: center;
+            }
+
+            @include breakpoint($tablet) {
+                font-size: 24px;
+            }
+
+            @include breakpoint($mobile-l) {
+                margin-bottom: 50px;
+
+                font-size: 20px;
+            }
+        }
+
+        .form__group {
+            @include breakpoint($breakpoint-2xl) {
+                width: 30%;
+            }
+
+            @include breakpoint($mobile-l) {
+                width: 100%;
+                max-width: 350px;
+                margin: 0 auto 25px;
+            }
+
+            &:last-of-type {
+                @include breakpoint($breakpoint-2xl) {
+                    width: 100%;
+                }
+
+                @include breakpoint($mobile-l) {
+                    max-width: 350px;
+                    margin-bottom: 0;
+                }
+            }
+        }
+
+        .btn {
+            margin: 0 0 0 auto;
+
+
+            @include breakpoint($breakpoint-l) {
+                margin: 0 auto;
+
+                font-size: 16px;
+            }
+        }
+    }
+}

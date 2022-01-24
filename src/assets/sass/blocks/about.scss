@@ -1,0 +1,122 @@
+.about {
+    padding: 110px 60px 50px;
+
+
+    @include breakpoint($breakpoint-l) {
+        padding: 80px 40px 50px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-top: 60px;
+    }
+
+    @include breakpoint($mobile-l) {
+        padding: 50px 20px;
+    }
+
+
+
+    &__img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 50px;
+
+
+        @include breakpoint($tablet) {
+            margin-bottom: 40px;
+        }
+
+        @include breakpoint($mobile-l) {
+            height: 150px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+
+
+        @include breakpoint($tablet) {
+            flex-wrap: wrap;
+        }
+
+
+
+        .info__item {
+            width: 350px;
+
+
+            @include breakpoint($breakpoint-xl) {
+                width: 30%;
+            }
+
+            @include breakpoint($tablet) {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+
+            @include breakpoint($mobile-l) {
+                text-align: center;
+            }
+
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:last-child {
+                text-align: right;
+
+
+                @include breakpoint($tablet) {
+                    margin-bottom: 0;
+                }
+
+                @include breakpoint($mobile-l) {
+                    text-align: center;
+                }
+            }
+
+
+            &-title {
+                margin-bottom: 30px;
+
+                font-size: 24px;
+                line-height: 29px;
+                font-weight: 700;
+
+
+                @include breakpoint($breakpoint-l) {
+                    margin-bottom: 20px;
+
+                    font-size: 20px;
+                    line-height: 24px;
+                }
+
+                @include breakpoint($tablet) {
+                    margin-bottom: 15px;
+                }
+
+                @include breakpoint($mobile-l) {
+                    margin-bottom: 10px;
+                }
+            }
+
+            &-txt {
+                @include gray-text;
+
+
+                @include breakpoint($breakpoint-l) {
+                    font-size: 16px;
+                    line-height: 20px;
+                }
+
+                @include breakpoint($tablet) {
+                    letter-spacing: 0;
+                }
+            }
+        }
+    }
+}

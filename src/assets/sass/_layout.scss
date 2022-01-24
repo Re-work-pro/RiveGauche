@@ -1,0 +1,29 @@
+.container {
+    max-width: 1550px;
+    margin: 0 auto;
+
+
+    @include breakpoint($breakpoint-xl) {
+
+    }
+
+    @include breakpoint($breakpoint-l) {
+
+    }
+
+    @include breakpoint($breakpoint-sl) {
+
+    }
+
+    @include breakpoint($tablet) {
+
+    }
+
+    @include breakpoint($mobile-l) {
+
+    }
+
+    @include breakpoint($mobile-s) {
+
+    }
+}

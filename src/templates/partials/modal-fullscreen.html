@@ -1,0 +1,40 @@
+<div class="modal modal--fullscreen" id="modal-fullscreen">
+
+    <button class="modal__close fullscreen">
+        <img src="img/form-close.svg" alt="Иконка в виде крестика">
+    </button>
+    <div class="modal__content fullscreen">
+
+        <form class="form form--fullscreen" action="/" method="post">
+
+            <h2 class="form__title">
+                Оставьте заявку и мы с вами свяжемся!
+            </h2>
+
+            <div class="form-inner">
+                <div class="form__group">
+                    <input class="form__control" type="text" placeholder="Имя*" required>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group">
+                    <input class="form__control" type="text" placeholder="Телефон*" required>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group">
+                    <input class="form__control" type="email" placeholder="E-mail*" required>
+                    <span class="form__line"></span>
+                </div>
+                <div class="form__group">
+                    <textarea class="form__control" type="text" placeholder="Сообщение" name="post-text" data-autoresize></textarea>
+                    <span class="form__line"></span>
+                </div>
+            </div>
+
+            <button class="btn btn--form" type="submit">
+                Отправить
+            </button>
+
+        </form><!-- /.form -->
+
+    </div><!-- /.modal__content -->
+</div><!-- /.modal-fullscreen-->

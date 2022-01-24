@@ -1,0 +1,160 @@
+.works-page {
+    padding-top: 220px;
+
+
+    @include breakpoint($breakpoint-xl) {
+        padding-top: 200px;
+    }
+
+    @include breakpoint($breakpoint-l) {
+        padding-top: 160px;
+    }
+
+    @include breakpoint($breakpoint-sl) {
+        padding-top: 140px;
+    }
+
+    @include breakpoint($mobile-l) {
+        padding-top: 110px;
+    }
+
+
+
+    &__nav {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 50px;
+
+
+        @include breakpointMin($breakpoint-huge) {
+            justify-content: unset;
+            padding-left: 215px;
+        }
+
+        @include breakpoint($breakpoint-xl) {
+            margin-bottom: 30px;
+        }
+
+        @include breakpoint($tablet) {
+            margin-bottom: 20px;
+            padding: 0 20px;
+            justify-content: space-between;
+        }
+
+        @include breakpoint($mobile-l) {
+            display: none;
+        }
+
+
+
+        .nav__item {
+            margin-right: 40px;
+
+
+            @include breakpoint($breakpoint-l) {
+                margin-right: 25px;
+                padding: 0;
+            }
+
+            @include breakpoint($breakpoint-sl) {
+                margin-right: 0;
+            }
+        }
+
+        .nav__link {
+            color: #AFAFAF;
+
+
+            @include breakpoint($breakpoint-xl) {
+                font-size: 22px;
+            }
+
+            @include breakpoint($breakpoint-l) {
+                font-size: 20px;
+            }
+
+            @include breakpoint($breakpoint-sl) {
+                font-size: 18px;
+            }
+
+            @include breakpoint($tablet) {
+                font-size: 16px;
+            }
+
+
+
+            &.active {
+                color: $white;
+            }
+        }
+    }
+}
+
+.works-examples {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(6, 550px);
+    margin-bottom: 40px;
+
+
+    @include breakpoint($mobile-l) {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(12, 350px);
+        gap: 30px 0;
+        margin-bottom: 0;
+    }
+}
+
+.work__example {
+    color: $white;
+
+    position: relative;
+
+
+
+    & img {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+
+        z-index: -1;
+    }
+
+    &-title {
+        margin-bottom: 20px;
+        padding-top: 50px;
+        padding-left: 60px;
+
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+
+
+        @include breakpoint($breakpoint-sl) {
+            padding-top: 40px;
+            padding-left: 40px;
+
+            font-size: 22px;
+            line-height: 24px;
+        }
+
+        @include breakpoint($tablet) {
+            padding-top: 30px;
+            padding-left: 30px;
+            margin-bottom: 15px;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 10px;
+            padding-top: 20px;
+            padding-left: 20px;
+
+            font-size: 20px;
+        }
+    }
+}

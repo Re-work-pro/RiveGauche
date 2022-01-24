@@ -1,0 +1,248 @@
+.opened-project {
+    padding: 220px 60px 80px;
+
+
+    @include breakpoint($breakpoint-xl) {
+        padding-top: 180px;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 160px 40px 60px;
+    }
+
+    @include breakpoint($mobile-l) {
+        padding: 110px 20px 40px;
+    }
+
+
+
+    &__client {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        margin-bottom: 100px;
+
+
+        @include breakpoint($tablet) {
+            margin-bottom: 65px;
+        }
+
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 35px;
+
+            height: 200px;
+        }
+    }
+}
+
+.process__item {
+    width: 400px;
+
+    text-align: center;
+
+
+    @include breakpoint($breakpoint-3xl) {
+        width: 31%;
+    }
+
+    @include breakpoint($tablet) {
+        width: 100%;
+        margin-bottom: 50px;
+
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    @include breakpoint($mobile-l) {
+        margin-bottom: 35px;
+    }
+
+
+
+    &:nth-of-type(2) {
+        @include breakpointMin($breakpoint-huge) {
+            width: 429px;
+        }
+    }
+
+
+
+    &-icon {
+        margin-bottom: 10px;
+
+
+        @include breakpoint($tablet) {
+            width: 60px;
+        }
+    }
+
+    &-title {
+        padding-bottom: 18px;
+        margin-bottom: 22px;
+
+        font-size: 18px;
+
+        border-bottom: 1px solid #696969;
+
+
+        @include breakpoint($breakpoint-l) {
+            padding-bottom: 10px;
+            margin-bottom: 10px;
+        }
+
+        @include breakpoint($tablet) {
+            width: fit-content;
+            margin: 0 auto 5px;
+            padding-bottom: 7.5px;
+
+        }
+    }
+
+    &-txt {
+        font-size: 18px;
+        line-height: 22px;
+        letter-spacing: 0.04em;
+        text-align: center;
+    }
+
+    &-link {
+        font-family: $font-inter;
+        font-size: 18px;
+        line-height: 22px;
+        font-weight: 500;
+        color: $white;
+
+
+        @include breakpoint($tablet) {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+}
+
+.project {
+    // Project-process
+    &-process {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        margin-bottom: 70px;
+
+
+        @include breakpoint($tablet) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 50px;
+        }
+    }
+
+
+
+    // Project-description
+    &-description {
+        padding-bottom: 50px;
+
+        border-bottom: 1px solid #696969;
+
+        text-align: center;
+
+
+        @include breakpoint($tablet) {
+            padding-bottom: 40px;
+        }
+
+        @include breakpoint($mobile-l) {
+            padding-bottom: 10px;
+        }
+
+
+        &__title {
+            margin-bottom: 50px;
+
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 700;
+
+
+            @include breakpoint($breakpoint-l) {
+                margin-bottom: 40px;
+            }
+
+            @include breakpoint($mobile-l) {
+                margin-bottom: 30px;
+
+                font-size: 22px;
+                line-height: 24px;
+            }
+        }
+
+        &__txt {
+            width: 953.25px;
+            margin: 0 auto;
+
+            @include gray-text;
+            line-height: 22px;
+            letter-spacing: 0;
+
+
+            @include breakpoint($breakpoint-xl) {
+                width: 85%;
+            }
+
+            @include breakpoint($tablet) {
+                font-size: 17px;
+                line-height: 24px;
+            }
+
+            @include breakpoint($mobile-l) {
+                width: 100%;
+                font-size: 16px;
+                line-height: 22px;
+            }
+        }
+    }
+
+
+
+    // Project-result
+    &-result {
+        padding-top: 35px;
+
+        text-align: center;
+
+
+
+        &__title {
+            margin-bottom: 50px;
+
+            font-size: 24px;
+            line-height: 30px;
+            font-weight: 700;
+
+
+            @include breakpoint($mobile-l) {
+                margin-bottom: 30px;
+
+                font-size: 22px;
+                line-height: 24px;
+            }
+        }
+
+        &__img {
+            display: block;
+            width: 960px;
+            margin: 0 auto;
+
+            border-radius: $border-radius;
+            box-shadow: 0px 6px 9px rgba(0, 0, 0, 0.5);
+        }
+    }
+}
+

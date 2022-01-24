@@ -1,0 +1,356 @@
+.list-filter {
+    display: none;
+    width: 250px;
+    height: 42px;
+    margin: 0 auto 20px;
+
+    position: relative;
+
+    z-index: 1;
+
+
+    @include breakpoint($mobile-l) {
+        display: block;
+    }
+}
+
+.brd {
+    border: 1px solid $gray;
+}
+
+#info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 14px;
+    background-color: #f3f9f9;
+}
+
+#select-button {
+    padding: 7.5px 12.5px;
+
+    position: relative;
+
+    background-color: $main-bg;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#options-view-button {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    opacity: 0;
+    cursor: pointer;
+    z-index: 3;
+}
+
+#selected-value {
+    font-size: 16px;
+    line-height: 20px;
+}
+
+.option,
+.label {
+    color: $white;
+    font-size: 16px;
+}
+
+#chevrons {
+    width: 10px;
+    padding: 8px 7px;
+
+    position: absolute;
+    top: 0;
+    right: 10px;
+    bottom: 0;
+
+    z-index: 50;
+}
+
+#chevrons img {
+    display: block;
+    width: 10px;
+    height: 6px;
+    text-align: right;
+
+
+    &:last-of-type {
+        margin-top: 5px;
+
+        transform: rotate(180deg);
+    }
+}
+
+.options {
+    position: absolute;
+    left: 0;
+    width: 100%;
+}
+
+#options {
+    position: absolute;
+    top: 42px;
+    right: 0;
+    left: 0;
+    width: 100%;
+    margin: 0 auto;
+    background-color: $main-bg;
+    border-radius: 4px;
+}
+
+#options-view-button:checked ~ #options {
+    border: 1px solid $gray;
+}
+
+.option {
+    display: flex;
+    align-items: center;
+
+    line-height: 20px;
+
+    position: relative;
+
+    transition: $transition;
+    z-index: 2;
+
+
+    &:nth-of-type(3) img {
+        width: 18px;
+        margin-left: 3px;
+    }
+}
+
+.option img {
+    display: none;
+    width: 25px;
+    height: 25px;
+
+    position: absolute;
+    left: 14px;
+}
+
+#options-view-button:checked ~ #options .option img {
+    display: block;
+}
+
+.label {
+    display: none;
+    padding: 0;
+    margin-left: 27px;
+}
+
+#options-view-button:checked ~ #options .label {
+    display: block;
+    padding: 10px 0 10px 20px;
+}
+
+.s-c {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 50%;
+}
+
+.s-c.top {
+    top: 0;
+}
+
+.s-c.bottom {
+    bottom: 0;
+}
+
+input[type="radio"] {
+    position: absolute;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    margin: 0;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.s-c:hover ~ i {
+    color: #fff;
+    opacity: 0;
+}
+
+.s-c:hover {
+    height: 100%;
+    z-index: 1;
+}
+
+.s-c.bottom:hover + i {
+    bottom: -25px;
+    animation: moveup 0.3s ease 0.1s forwards;
+}
+
+.s-c.top:hover ~ i {
+    top: -25px;
+    animation: movedown 0.3s ease 0.1s forwards;
+}
+
+@keyframes moveup {
+    0% {
+        bottom: -25px;
+        opacity: 0;
+    }
+    100% {
+        bottom: 0;
+        opacity: 1;
+    }
+}
+
+@keyframes movedown {
+    0% {
+        top: -25px;
+        opacity: 0;
+    }
+    100% {
+        top: 0;
+        opacity: 1;
+    }
+}
+
+.label {
+    transition: 0.3s ease all;
+}
+
+.opt-val {
+    padding-left: 20px;
+    position: absolute;
+    left: 2px;
+    width: 95%;
+
+    background-color: $main-bg;
+
+    opacity: 0;
+    transform: scale(0);
+}
+
+.option input[type="radio"]:checked ~ .opt-val {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.option input[type="radio"]:checked ~ i {
+    top: 0;
+    bottom: auto;
+    opacity: 1;
+    animation: unset;
+}
+
+.option input[type="radio"]:checked ~ i,
+.option input[type="radio"]:checked ~ .label {
+    color: #fff;
+}
+
+.option input[type="radio"]:checked ~ .label:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#options-view-button:not(:checked) ~ #options .option input[type="radio"]:checked ~ .opt-val {
+    top: -33px;
+}
+
+.option input[type="radio"]:checked ~ .label:before {
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(1) input[type="radio"]:checked ~ .opt-val {
+    top: -35px;
+}
+
+.option:nth-child(2) input[type="radio"]:checked ~ .opt-val {
+    top: -74px;
+}
+
+.option:nth-child(3) input[type="radio"]:checked ~ .opt-val {
+top: -114px;
+}
+
+.option:nth-child(4) input[type="radio"]:checked ~ .opt-val {
+    top: -154px;
+}
+
+.option:nth-child(5) input[type="radio"]:checked ~ .opt-val {
+    top: -194px;
+}
+
+.option:nth-child(6) input[type="radio"]:checked ~ .opt-val {
+    top: -234px;
+}
+
+.option:nth-child(7) input[type="radio"]:checked ~ .opt-val {
+    top: -274px;
+    border-radius: 0 0 4px 4px;
+}
+
+
+#option-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 40px;
+    transition: 0.3s ease all;
+    z-index: 1;
+    display: none;
+}
+
+#options-view-button:checked ~ #options #option-bg {
+    display: block;
+}
+
+.option:hover .label {
+    color: #fff;
+}
+
+.option::hover ~ #option-bg {
+    top: 0;
+    background-color: #000;
+    border-radius: 4px 4px 0 0;
+}
+
+.option:nth-child(2):hover ~ #option-bg {
+    top: 40px;
+}
+
+.option:nth-child(3):hover ~ #option-bg {
+    top: 80px;
+}
+
+.option:nth-child(4):hover ~ #option-bg {
+    top: 120px;
+}
+
+.option:nth-child(5):hover ~ #option-bg {
+    top: 160px;
+}
+
+.option:nth-child(6):hover ~ #option-bg {
+    top: 200px;
+}
+
+.option:nth-child(7):hover ~ #option-bg {
+    top: 240px;
+    border-radius: 0 0 4px 4px;
+}

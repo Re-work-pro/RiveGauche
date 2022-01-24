@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    
+    <meta http-equiv="x-ua-compatible" content="ie-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="robots" content="index, follow, noodp">
+    <meta name="googlebot" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+    
+    <title>Rework</title>
+</head>
+<body>
+
+    <div class="page" id="page">
+        <header class="header">
+        
+            <div class="header__left">
+                <div class="header__logo">
+                    <div class="header__logo-left">
+                        <span>Re</span>work
+                    </div>
+                    <span class="header__logo-bar"></span>
+                    <div class="header__logo-right">
+                        Digital-
+                        <br />
+                        агентство
+                    </div>
+                </div>
+            </div>
+        
+            <nav class="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link is--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services-page.html" class="nav__link">Услуги</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="works-page.html" class="nav__link">Работы</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="clients-page.html" class="nav__link">Клиенты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Блог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="team.html" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts-page.html" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav>
+        
+            <!-- Mobile Nav -->
+            <nav class="nav nav--mobile" id="mobileNav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="index.html" class="nav__link is--active">Главная</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="services-page.html" class="nav__link">Услуги</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="works-page.html" class="nav__link">Работы</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="clients-page.html" class="nav__link">Клиенты</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="blog.html" class="nav__link">Блог</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="team.html" class="nav__link">О нас</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="contacts-page.html" class="nav__link">Контакты</a>
+                    </li>
+                </ul>
+            </nav><!-- /.nav  mobile-menu -->
+        
+            <div class="header__right">
+                <div class="header-contacts">
+                    <a href="mailto:info@thlab.ru" class="header-contacts__link">
+                        info@thlab.ru
+                    </a>
+                    <a href="tel:+78129200936" class="header-contacts__link">
+                        +7(812) 920-09-36
+                    </a>
+                </div>
+            </div>
+        
+            <!-- Burger -->
+            <button class="burger" type="button" id="burger">
+                <span></span>
+            </button>
+        
+        </header>
+        <!-- Кнопка для формы обратной связи -->
+        <div class="btn btn--contact" type="button" data-modal="modal-contact">
+            <div class="message-img__wrapper">
+                <img class="message__icon" src="img/support-message.svg" alt="Иконка сообщения для обратной связи">
+            </div>
+        </div>
+
+        <!-- Модальное окно обратной связи (маленькое) -->
+        <div class="modal modal--contact" id="modal-contact">
+            <button class="modal__close">
+                <img src="img/form-close.svg" alt="Иконка в виде крестика">
+            </button>
+        
+            <div class="modal__content contact">
+        
+                <h4 class="modal__title">
+                    Заплоните форму и мы с Вами
+                    <br />
+                    свяжемся!
+                </h4>
+        
+                <form class="form form--contact" action="/" method="post">
+        
+                    <div class="form-inner form-inner--message">
+                        <div class="form__group form__group--message">
+                            <input class="form__control" type="text" placeholder="Имя*" required>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group form__group--message">
+                            <input class="form__control" type="text" placeholder="Телефон*" required>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group form__group--message">
+                            <textarea class="form__control" type="text" placeholder="Сообщение" name="post-text" data-autoresize></textarea>
+                            <span class="form__line"></span>
+                        </div>
+        
+                        <button class="btn btn--form message" type="submit">
+                            Отправить
+                        </button>
+                    </div>
+        
+                </form><!-- /.form contact-form -->
+        
+            </div><!-- /.modal-contact__content -->
+        </div><!-- /.modal-contact-->
+        <!-- Модальное окно обратной связи на весь экран -->
+        <div class="modal modal--fullscreen" id="modal-fullscreen">
+        
+            <button class="modal__close fullscreen">
+                <img src="img/form-close.svg" alt="Иконка в виде крестика">
+            </button>
+            <div class="modal__content fullscreen">
+        
+                <form class="form form--fullscreen" action="/" method="post">
+        
+                    <h2 class="form__title">
+                        Оставьте заявку и мы с вами свяжемся!
+                    </h2>
+        
+                    <div class="form-inner">
+                        <div class="form__group">
+                            <input class="form__control" type="text" placeholder="Имя*" required>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__control" type="text" placeholder="Телефон*" required>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <input class="form__control" type="email" placeholder="E-mail*" required>
+                            <span class="form__line"></span>
+                        </div>
+                        <div class="form__group">
+                            <textarea class="form__control" type="text" placeholder="Сообщение" name="post-text" data-autoresize></textarea>
+                            <span class="form__line"></span>
+                        </div>
+                    </div>
+        
+                    <button class="btn btn--form" type="submit">
+                        Отправить
+                    </button>
+        
+                </form><!-- /.form -->
+        
+            </div><!-- /.modal__content -->
+        </div><!-- /.modal-fullscreen-->
+        <main class="main">
+            
+            <!-- Hero -->
+            <div class="hero">
+              <h1 class="hero__title">
+                Создаем <span>удобные</span>
+                <br />
+                в использовании сайты и
+                <br />
+                приложения
+              </h1>
+            
+              <button class="btn btn--hero" type="button" data-modal="modal-fullscreen">
+                  Обсудить проект
+              </button>
+            
+              <!-- Socials -->
+              <ul class="socials">
+                  <li class="socials__item">
+                      <a href="#" class="socials__link" target="_blank">
+                      <img
+                          src="img/socials/vk.svg"
+                          alt="Страница компании Rework Вконтакте"
+                      />
+                      </a>
+                  </li>
+                  <li class="socials__item">
+                      <a href="#" class="socials__link" target="_blank">
+                      <img
+                          src="img/socials/inst.svg"
+                          alt="Страница компании Rework в Инстграм"
+                      />
+                      </a>
+                  </li>
+                  <li class="socials__item">
+                      <a href="#" class="socials__link" target="_blank">
+                      <img
+                          src="img/socials/fb.svg"
+                          alt="Страница компании Rework в Фэйсбуке"
+                      />
+                      </a>
+                  </li>
+                  <li class="socials__item">
+                      <a href="#" class="socials__link" target="_blank">
+                      <img
+                          src="img/socials/twitter.svg"
+                          alt="Страница компании Rework в Твиттере"
+                      />
+                      </a>
+                  </li>
+              </ul><!-- /.socials -->
+            
+            </div>
+            <!-- /.hero -->
+            
+            <!-- About Us -->
+            <div class="about">
+              <div class="container">
+                <h2 class="title title-about">О нас</h2>
+            
+                <img
+                  class="about__img"
+                  src="img/about_img.jpg"
+                  alt="Разработчик работает за макбуком"
+                />
+            
+                <!-- About Info -->
+                <div class="about__info">
+                  <div class="info__item">
+                    <h3 class="info__item-title">Кто мы такие?</h3>
+            
+                    <p class="info__item-txt">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi vitae non nulla diam ut. Tincidunt et, elit volutpat, vel. Ipsum tortor proin faucibus euismod velit tellus eu.
+                    </p>
+                  </div>
+            
+                  <div class="info__item">
+                    <h3 class="info__item-title">Наша философия</h3>
+            
+                    <p class="info__item-txt">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi vitae non nulla diam ut. Tincidunt et, elit volutpat, vel. Ipsum tortor proin faucibus euismod velit tellus eu.
+                    </p>
+                  </div>
+            
+                  <div class="info__item">
+                    <h3 class="info__item-title">Как мы работаем?</h3>
+            
+                    <p class="info__item-txt">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi vitae non nulla diam ut. Tincidunt et, elit volutpat, vel. Ipsum tortor proin faucibus euismod velit tellus eu.
+                    </p>
+                  </div>
+                </div>
+                <!-- /.about__info -->
+              </div>
+              <!-- /.container -->
+            </div>
+            <!-- /.about -->
+            
+            <!-- Services -->
+            <div class="services">
+              <div class="container">
+                <h2 class="title title-services">Наши услуги</h2>
+            
+                <div class="services-inner">
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/web-site.svg"
+                        alt="Схематическая иконка веб-страницы"
+                      />
+                      <span class="web-site">Разработка сайтов</span>
+                    </h3>
+                    <div class="services__card-txt">
+                      В современном мире любой бизнес или компания не обойдутся без своего
+                      собственного сайта.
+                      <br />
+                      Мы спроектируем концепцию сайта.
+                      <br />
+                      Создадим уникальный дизайн и сверстаем его.
+                      <br />
+                      <br />
+                      Вы можете выбрать тип сайта, который вам нужен:
+                      <br />
+                      <br />
+                      — Многостраничный сайт
+                      <br />
+                      — Landing-page
+                      <br />
+                      — Интернет-магазин
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+            
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/mobile.svg"
+                        alt="Иконка в виде мобильного устройства"
+                      />
+                      <span class="mobile">
+                        Разработка мобильных
+                        <br />
+                        приложений
+                      </span>
+                    </h3>
+                    <div class="services__card-txt">
+                      Первым этапом стоит аналитика, мы соберем всю информацию и
+                      проанализируем ваши пожелания. Далее спроектируем вид, функционал и
+                      дизайн приложения, отталкиваясь от современных тенденций.
+                      <br />
+                      После всех выше перечисленных этапов, наши разработчики пишут код.
+                      <br />
+                      Во время всего процесса мы согласовываем с клиентом все критерии.
+                      Далее выставляем приложение на маркет, поддерживаем и развиваем его,
+                      если возникают проблемы, во время прибываниня на маркете.
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+            
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/pc.svg"
+                        alt="Иконка в виде мобильного устройства"
+                      />
+                      <span class="computer">
+                        Разработка и интеграция
+                        <br />
+                        сложных ИТ решений
+                      </span>
+                    </h3>
+                    <div class="services__card-txt">
+                      Повысим ценность отдельных ИТ решений
+                      <br />
+                      для бизнеса посредством сквозной
+                      <br />
+                      интеграции каналов, ИТ решений и данных.
+                      <br />
+                      <br />
+                      Конечный итог — максимально эффективное управление технологическим
+                      процессом, производством и организацией в целом.
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+            
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/branding.svg"
+                        alt="Иконка в виде мобильного устройства"
+                      />
+                      <span class="branding">Брендинг</span>
+                    </h3>
+                    <div class="services__card-txt">
+                      Создадим для вас уникальный бренд, который сформирует долгосрочное
+                      предпочтение к предмету маркетинга.
+                      <br />
+                      <br />
+                      Нашей основной задачей будет создание четкого и понятного образа
+                      предмета.
+                      <br />
+                      Анализ конкурентов и становление бренда популярным у целевой
+                      аудитории.
+                      <br />
+                      <br />
+                      Так же мы постараемся сохранить особый имидж товара при любых его
+                      модификациях.
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+            
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/seo.svg"
+                        alt="Иконка в виде мобильного устройства"
+                      />
+                      <span class="seo">Реклама, SEO</span>
+                    </h3>
+                    <div class="services__card-txt">
+                      Цель SEO – выведение клиента в ТОП поисковой выдачи по указанным
+                      запросам.
+                      <br />
+                      Современные поисковые системы постоянно совершенствуются, изменяя свои
+                      алгоритмы поиска.
+                      <br />
+                      <br />
+                      Наша задача сохраняется – максимально прорекламировать клиента и его
+                      продукт, путем выведения в ТОпыы запросов.
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+            
+                  <div class="services__card">
+                    <h3 class="services__card-title">
+                      <img
+                        src="img/services/smm.svg"
+                        alt="Иконка в виде мобильного устройства"
+                      />
+                      <span class="smm">Контент, SMM</span>
+                    </h3>
+                    <div class="services__card-txt">
+                      Самые популярные эмоции, которые испытывают пользователи от соцсетей
+                      это – заинтересованность, веселье и радость.
+                      <br />
+                      Мы сделаем анализ контента, который клиент доносит до пользователя.
+                      <br />
+                      <br />
+                      Так же адаптируем информацию, после чего она будет быстрее доходить до
+                      аудитории и будет ей понятна.
+                    </div>
+                    <button
+                      class="btn btn--services"
+                      type="button"
+                      data-modal="contact-modal"
+                    >
+                      Заказать
+                    </button>
+                  </div>
+                  <!-- /.services__card -->
+                </div>
+                <!-- /.services-inner -->
+              </div>
+              <!-- /.container -->
+            </div>
+            <!-- /.services -->
+            
+            <!-- Works -->
+            <div class="works">
+                <div class="container">
+                    <div class="works__header">
+                        <h2 class="title title--works">Работы</h2>
+            
+                        <a class="btn btn--works" href="works-page.html">
+                          Показать все
+                        </a>
+                    </div>
+                </div>
+                <!-- .container -->
+            
+                <!-- Works Slider -->
+                <!-- Slider works -->
+                <div class="swiper slider--works">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide slides--group">
+                            <img src="img/works/work1.jpg" alt="Превью первой работы" class="slider__item-img img1" />
+                            <img src="img/works/work1.jpg" alt="Превью второй работы" class="slider__item-img img2" />
+                            <img src="img/works/work1.jpg" alt="Превью третьей работы" class="slider__item-img img3" />
+                        </div>
+                        <div class="swiper-slide slides--group">
+                            <img src="img/works/work2.jpg" alt="Превью четвертой работы" class="slider__item-img img4" />
+                            <img src="img/works/work2.jpg" alt="Превью пятой работы" class="slider__item-img img5" />
+                            <img src="img/works/work2.jpg" alt="Превью пятой работы" class="slider__item-img img5" />
+                        </div>
+                        <div class="swiper-slide slides--group">
+                            <img src="img/works/work3.jpg" alt="Превью пятой работы" class="slider__item-img img5" />
+                            <img src="img/works/work3.jpg" alt="Превью пятой работы" class="slider__item-img img5" />
+                            <img src="img/works/work3.jpg" alt="Превью пятой работы" class="slider__item-img img5" />
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination"></div>
+                
+                  </div>
+                
+                
+                
+            
+            </div><!-- /.works-->
+            
+            <!-- Reviews -->
+            <div class="reviews">
+                <div class="container">
+                    <h2 class="title title--reviews">
+                        Отзывы наших клиентов
+                    </h2>
+                </div>
+            
+                <div class="swiper slider--reviews">
+                    <div class="swiper-wrapper">
+                
+                        <div class="swiper-slide reviews__item">
+                            <img src="img/reviews/reviews__avatar1.jpg" alt="Аватар пользователя 1" class="reviews__avatar">
+                
+                            <div class="reviews__item-content-text">
+                                <h4 class="reviews__item-title">
+                                    «У агентства большое будещее»
+                                </h4>
+                
+                                <p class="reviews__item-text">
+                                    Нам нравятся подходы в работе Вашей команды - любой вопрос решается специалистом в течение короткого периода времени. Надеемся на сохранение сложившихся отношений и на дальнейшее взаимовыгодное сотрудничество.
+                                </p>
+                
+                                <div class="reviews__item-author">
+                                    Георгий Попов
+                                </div>
+                            </div>
+                        </div><!-- /.slide reviews__item -->
+                
+                        <div class="swiper-slide reviews__item">
+                            <img src="img/reviews/reviews__avatar2.jpg" alt="Аватар пользователя 2" class="reviews__avatar">
+                
+                            <div class="reviews__item-content-text">
+                                <h4 class="reviews__item-title">
+                                    «Отличное сотрудничество»
+                                </h4>
+                
+                                <p class="reviews__item-text">
+                                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eos repellendus similique reprehenderit qui maxime itaque, provident aliquam accusantium? Dolores, possimus!
+                                </p>
+                
+                                <div class="reviews__item-author">
+                                    Валентин Егоров
+                                </div>
+                            </div>
+                        </div><!-- /.slide reviews__item -->
+                
+                        <div class="swiper-slide reviews__item">
+                            <img src="img/reviews/reviews__avatar3.jpg" alt="Аватар пользователя 3" class="reviews__avatar">
+                
+                            <div class="reviews__item-content-text">
+                                <h4 class="reviews__item-title">
+                                    «Четко выполненые сроки»
+                                </h4>
+                
+                                <p class="reviews__item-text">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio nesciunt adipisci provident ad magnam voluptate eos dolor autem possimus, eveniet dignissimos accusamus. Aut, soluta hic!
+                                </p>
+                
+                                <div class="reviews__item-author">
+                                    Александра Петрова
+                                </div>
+                            </div>
+                        </div><!-- /.slide reviews__item -->
+                
+                    </div><!-- /.slider-wrapper -->
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div><!-- /.slider slider-reviews -->
+            </div>
+            
+            <!-- Clients -->
+            <div class="clients">
+                <div class="container">
+            
+                    <h2 class="title title--clients">
+                        Наши клиенты
+                    </h2>
+            
+                    <div class="clients__logo-wrapper">
+                        <div class="clients__item">
+                            <img src="img/clients/hello_logo.svg" alt="Логотип журнала Hello" class="clients__logo">
+                        </div>
+                        <div class="clients__item">
+                            <img src="img/clients/Hilton_logo.svg" alt="Логотип сети отелей Hilton" class="clients__logo">
+                        </div>
+                        <div class="clients__item">
+                            <img src="img/clients/kerama_logo.svg" alt="Логотип компании Керама Марраци" class="clients__logo">
+                        </div>
+                        <div class="clients__item">
+                            <img src="img/clients/miratorg_logo.svg" alt="Логтип компании Мираторг" class="clients__logo">
+                        </div>
+                        <div class="clients__item">
+                            <img src="img/clients/forbes_logo.svg" alt="Логотип журнала Forbes" class="clients__logo">
+                        </div>
+                    </div>
+            
+                </div>
+            </div>
+            
+            <!-- Blog -->
+            <div class="blog">
+                <div class="container">
+                    <div class="blog__header">
+                        <h2 class="title title--blog">
+                            Блог
+                        </h2>
+                        <a class="btn btn--blog" href="blog.html">
+                            Перейти в раздел
+                        </a>
+                    </div>
+                </div>
+            
+                <!-- Slider blog -->
+                <div class="swiper slider--blog">
+                    <!-- Additional required wrapper -->
+                    <div class="swiper-wrapper">
+                        <!-- Slides -->
+                        <div class="swiper-slide blog__item slide1">
+                            <a class="blog__link link--1" href="#">
+                                <img src="img/blog/ui.jpg" alt="Превью первой работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        UX/UI Дизайн
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Рассказываем об организации рабочего места
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--2" href="#">
+                                <img src="img/blog/frontend.jpg" alt="Превью второй работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Front-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные советы верстальщикам
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--3" href="#">
+                                <img src="img/blog/backend.jpg" alt="Превью третьей работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Back-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные ресурсы по Back-end
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide blog__item slide2">
+                            <a class="blog__link link--4" href="#">
+                                <img src="img/blog/ui.jpg" alt="Превью первой работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        UX/UI Дизайн
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Рассказываем об организации рабочего места
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--5" href="#">
+                                <img src="img/blog/frontend.jpg" alt="Превью второй работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Front-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные советы верстальщикам
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--6" href="#">
+                                <img src="img/blog/backend.jpg" alt="Превью третьей работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Back-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные ресурсы по Back-end
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="swiper-slide blog__item slide3">
+                            <a class="blog__link link--7" href="#">
+                                <img src="img/blog/ui.jpg" alt="Превью первой работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        UX/UI Дизайн
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Рассказываем об организации рабочего места
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--8" href="#">
+                                <img src="img/blog/frontend.jpg" alt="Превью второй работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Front-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные советы верстальщикам
+                                    </h4>
+                                </div>
+                            </a>
+                            <a class="blog__link link--9" href="#">
+                                <img src="img/blog/backend.jpg" alt="Превью третьей работы" class="blog__item-img" />
+                                <div class="blog__item-titles">
+                                    <span class="blog__item-suptitle">
+                                        Back-End
+                                    </span>
+                                    <h4 class="blog__item-title">
+                                        Полезные ресурсы по Back-end
+                                    </h4>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                    <!-- If we need pagination -->
+                    <div class="swiper-pagination pagination--blog"></div>
+                
+                  </div>
+            </div>
+            
+            <div class="main-form">
+                <div class="container">
+            
+                    <form class="form form--footer" action="/" method="post">
+            
+                        <h3 class="form__title">
+                            Остались вопросы?
+                            <br />
+                            Заполните форму и мы с вами свяжемся!
+                        </h3>
+            
+                        <div class="form-inner">
+                            <div class="form__group">
+                                <input class="form__control" type="text" placeholder="Имя*" required>
+                                <span class="form__line"></span>
+                            </div>
+                            <div class="form__group">
+                                <input class="form__control" type="text" placeholder="Телефон*" required>
+                                <span class="form__line"></span>
+                            </div>
+                            <div class="form__group">
+                                <input class="form__control" type="email" placeholder="E-mail*" required>
+                                <span class="form__line"></span>
+                            </div>
+                            <div class="form__group">
+                                <textarea class="form__control" type="text" placeholder="Сообщение" name="post-text" data-autoresize></textarea>
+                                <span class="form__line"></span>
+                            </div>
+                        </div>
+            
+                        <button class="btn btn--form" type="submit">
+                            Отправить
+                        </button>
+            
+                    </form><!-- /.form -->
+            
+                </div><!-- /.container -->
+            </div><!-- /.main-form -->        </main>
+
+        <!-- Footer -->
+        <div class="footer">
+        
+            <div class="footer__left">
+                <div class="footer__logo">
+                    <div class="footer__logo-left">
+                        <span>Re</span>work
+                    </div>
+                    <span class="footer__logo-bar"></span>
+                    <div class="footer__logo-right">
+                        Digital-
+                        <br />
+                        агентство
+                    </div>
+                </div>
+        
+                <!-- Socials -->
+                <ul class="socials socials--footer">
+                    <li class="socials__item">
+                        <a href="#" class="socials__link" target="_blank">
+                            <img
+                            src="img/socials/vk.svg"
+                            alt="Страница компании Rework Вконтакте"
+                            />
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link" target="_blank">
+                            <img
+                            src="img/socials/inst.svg"
+                            alt="Страница компании Rework в Инстграм"
+                            />
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link" target="_blank">
+                            <img
+                            src="img/socials/fb.svg"
+                            alt="Страница компании Rework в Фэйсбуке"
+                            />
+                        </a>
+                    </li>
+                    <li class="socials__item">
+                        <a href="#" class="socials__link" target="_blank">
+                            <img
+                            src="img/socials/twitter.svg"
+                            alt="Страница компании Rework в Твиттере"
+                            />
+                        </a>
+                    </li>
+                </ul><!-- /.socials -->
+            </div><!-- /.footer__left -->
+        
+            <div class="footer__right">
+                <span class="footer__copyright">
+                    © All Rights Reserved. Rework 2021
+                </span>
+                <a href="tel:+78129200936" class="footer__contact-link">
+                    +7(812) 920-09-36
+                </a>
+                <a href="mailto:info@thlab.ru" class="footer__contact-link">
+                    info@thlab.ru
+                </a>
+            </div>
+        
+        </div><!-- /.footer -->    </div>
+
+    <!-- Кнопка прокрутки страницы наверх -->
+    <button class="btn btn--scrollup" id="scrollUp" type="button">
+        <span></span>
+    </button>
+
+    <!-- JS -->
+    <script src="js/app.min.js"></script>
+</body>
+</html>

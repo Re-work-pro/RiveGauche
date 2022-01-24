@@ -1,0 +1,166 @@
+.title {
+    @include title;
+
+
+
+    @include breakpoint($breakpoint-l) {
+        margin-bottom: 60px;
+
+        font-size: 30px;
+        line-height: 32px;
+    }
+
+    @include breakpoint($tablet) {
+        width: fit-content;
+        margin-bottom: 50px;
+
+        font-size: 26px;
+        line-height: 28px;
+    }
+
+    @include breakpoint($mobile-l) {
+        margin: 0 auto 30px;
+
+        font-size: 22px;
+        line-height: 24px;
+    }
+
+    @include breakpoint($mobile-m) {
+        font-size: 20px;
+    }
+
+
+
+    &::before {
+        @include title-before;
+
+
+        @include breakpoint($tablet) {
+            width: 100%;
+
+            top: -5px;
+        }
+    }
+
+    &--works {
+        margin-bottom: 0;
+
+
+        @include breakpoint($mobile-l) {
+            margin: 0;
+        }
+    }
+
+    &--reviews {
+        @include breakpoint($breakpoint-l) {
+            padding-left: 40px;
+        }
+
+        @include breakpoint($tablet) {
+            padding-left: 60px;
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint($mobile-l) {
+            padding-left: 0;
+            margin-bottom: 35px;
+        }
+
+
+
+        &::before {
+            @include breakpoint($breakpoint-l) {
+                left: 40px;
+            }
+
+            @include breakpoint($tablet) {
+                width: 87%;
+                left: 60px;
+
+                top: -5px;
+            }
+
+            @include breakpoint($mobile-l) {
+                width: 100%;
+                left: 0;
+            }
+        }
+    }
+
+    &--blog {
+        margin: 0;
+
+
+        &:before {
+            background-color: $white;
+
+
+            @include breakpoint($breakpoint-l) {
+                width: 100%;
+            }
+        }
+    }
+
+    &--stages {
+        margin-bottom: 175px;
+
+
+        @include breakpoint($breakpoint-xl) {
+            margin-bottom: 150px;
+        }
+
+        @include breakpoint($breakpoint-sl) {
+            margin-bottom: 115px;
+        }
+
+        @include breakpoint($tablet) {
+            margin-bottom: 100px;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 80px;
+        }
+    }
+
+    &--team {
+        width: fit-content;
+        margin: 0 auto 70px;
+
+
+        @include breakpoint($tablet) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 35px;
+        }
+
+
+
+        &::before {
+            width: 100%;
+        }
+    }
+
+    &--members {
+        width: fit-content;
+        margin: 0 auto 70px;
+
+        text-transform: capitalize;
+
+
+        @include breakpoint($breakpoint-sl) {
+            margin-bottom: 50px;
+        }
+
+        @include breakpoint($mobile-l) {
+            margin-bottom: 35px;
+        }
+
+
+
+        &::before {
+            width: 100%;
+        }
+    }
+}
