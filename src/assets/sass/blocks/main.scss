@@ -6,9 +6,39 @@
 
 
 
+    @include breakpoint($tablet) {
+        padding-bottom: 90px;
+    }
+
+    @include breakpoint($bp-568) {
+        padding-bottom: 50px;
+    }
+
+
     &__logo {
         width: fit-content;
         margin: 0 auto 60px;
+
+
+
+        @include breakpoint($tablet) {
+            width: 100px;
+            height: 100px;
+        }
+
+        @include breakpoint($bp-568) {
+            width: 50px;
+            height: 50px;
+
+            margin: 0 auto 40px 0;
+        }
+
+
+        & img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     &__txt-content {
@@ -36,6 +66,15 @@
             max-width: unset;
             width: 80%;
         }
+
+        @include breakpoint($tablet) {
+            padding: 50px;
+        }
+
+        @include breakpoint($bp-568) {
+            width: 100%;
+            padding: 40px;
+        }
     }
 
     &__title {
@@ -55,6 +94,11 @@
             @include font28;
             font-weight: 700;
         }
+
+        @include breakpoint($tablet) {
+            @include font24;
+            font-weight: 700;
+        }
     }
 
     &__text {
@@ -66,6 +110,11 @@
 
         @include breakpoint($bp-1024) {
             @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
         }
     }
 
@@ -104,6 +153,19 @@
             right: 10%;
         }
 
+        @include breakpoint($tablet) {
+            top: 240px;
+        }
+
+        @include breakpoint($bp-568) {
+            width: 35%;
+            height: fit-content;
+            flex-direction: row;
+
+            top: 40px;
+            right: 30px;
+        }
+
 
 
         & a:not(:last-child) {
@@ -117,6 +179,11 @@
                 width: 50px;
                 height: 50px;
             }
+
+            @include breakpoint($bp-568) {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
@@ -126,6 +193,17 @@
         margin-top: 80px;
 
 
+
+        @include breakpoint($tablet) {
+            margin-top: 60px;
+        }
+
+        @include breakpoint($bp-568) {
+            height: 220px;
+            margin-top: 30px;
+            flex-direction: column;
+            align-items: center;
+        }
 
         .spoilers__item {
             @include spoiler-item;
@@ -168,6 +246,26 @@
                 @include font18;
             }
 
+            @include breakpoint($tablet) {
+                padding: 20px 20px 30px;
+            }
+
+            @include breakpoint($bp-640) {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            @include breakpoint($bp-568) {
+                width: 100%;
+                padding: 20px;
+
+                border-radius: $b-radius10;
+
+                br {
+                    display: none;
+                }
+            }
+
 
 
             &:first-child {
@@ -194,6 +292,15 @@
 
 
 
+    @include breakpoint($bp-900) {
+        padding-bottom: 120px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-bottom: 100px;
+    }
+
+
     &__title {
         @include title-block;
 
@@ -211,6 +318,25 @@
         margin-bottom: 30px;
 
         @include font28;
+
+
+
+        @include breakpoint($bp-1280) {
+            @include font24;
+        }
+
+        @include breakpoint($bp-1024) {
+            @include font20-light;
+        }
+
+        @include breakpoint($tablet) {
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }
 
@@ -224,6 +350,19 @@
 
 
 
+    @include breakpoint($tablet) {
+        height: 280px;
+
+        align-items: unset;
+    }
+
+    @include breakpoint($bp-568) {
+        height: fit-content;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
     &:last-child {
         margin-bottom: 0;
     }
@@ -234,28 +373,129 @@
         flex-direction: column;
         align-items: center;
         margin-right: 80px;
+
+
+
+        @include breakpoint($bp-1536) {
+            margin-right: 50px;
+        }
+
+        @include breakpoint($bp-1024) {
+            margin-right: 30px;
+        }
+
+        @include breakpoint($bp-568) {
+            margin-bottom: 15px;
+        }
     }
 
     & svg {
         position: absolute;
         top: -10px;
         left: -10px;
+
+
+
+        @include breakpoint($bp-1536) {
+            width: 300px;
+            height: 300px;
+
+            top: 0;
+            left: 0;
+        }
+
+        @include breakpoint($bp-1024) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include breakpoint($tablet) {
+            width: 200px;
+            height: 200px;
+
+            z-index: 100;
+        }
+
+        @include breakpoint($bp-640) {
+            width: 150px;
+            height: 150px;
+        }
+
+        @include breakpoint($bp-568) {
+            left: 50%;
+
+            transform: translateX(-59%);
+        }
     }
 
     & img {
         margin-bottom: 30px;
 
         border-radius: $b-radius50p;
+
+
+
+        @include breakpoint($bp-1536) {
+            width: 300px;
+            height: 300px;
+        }
+
+        @include breakpoint($bp-1280) {
+            margin-bottom: 15px;
+        }
+
+        @include breakpoint($bp-1024) {
+            width: 250px;
+            height: 250px;
+        }
+
+        @include breakpoint($tablet) {
+            width: 200px;
+            height: 200px;
+        }
+
+        @include breakpoint($bp-640) {
+            width: 148px;
+            height: 148px;
+
+            margin-bottom: 10px;
+        }
     }
 
     .star__name {
         @include font20;
+
+
+
+        @include breakpoint($tablet) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     .star__txt {
         margin-top: -54px;
 
         @include font24;
+
+
+
+        @include breakpoint($bp-1024) {
+            @include font20-light;
+        }
+
+        @include breakpoint($tablet) {
+            margin-top: 0;
+
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            margin-bottom: 20px;
+
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }
 
@@ -268,9 +508,29 @@
 
 
 
+    @include breakpoint($bp-1280) {
+        padding-bottom: 150px;
+    }
+
+    @include breakpoint($bp-1024) {
+        padding-bottom: 120px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-bottom: 100px;
+    }
+
+
     &__title {
         @include title-block;
 
+
+
+        @include breakpoint($bp-1100) {
+            br {
+                display: none;
+            }
+        }
 
 
         &::before {
@@ -285,6 +545,12 @@
         margin-bottom: 30px;
 
         @include font24;
+
+
+
+        @include breakpoint($bp-1024) {
+            @include font20-light;
+        }
     }
 
     & img {
@@ -306,6 +572,15 @@
 
 
 
+    @include breakpoint($bp-1280) {
+        padding-bottom: 150px;
+    }
+
+    @include breakpoint($bp-1024) {
+        padding-bottom: 120px;
+    }
+
+
     &__title {
         padding-left: 40px;
 
@@ -325,6 +600,16 @@
         padding-left: 40px;
 
         @include font24;
+
+
+
+        @include breakpoint($bp-1280) {
+            @include font20-light;
+        }
+
+        @include breakpoint($bp-1024) {
+            padding-left: 0;
+        }
     }
 }
 
@@ -341,6 +626,20 @@
 
 
 
+
+    @include breakpoint($bp-1536) {
+        padding: 50px 150px;
+    }
+
+    @include breakpoint($bp-1024) {
+        padding: 50px 80px;
+    }
+
+    @include breakpoint($tablet) {
+        padding: 40px 50px;
+    }
+
+
     &.show {
         display: block;
     }
@@ -349,10 +648,21 @@
         margin-bottom: 80px;
 
         @include font36;
+
+
+
+        @include breakpoint($bp-900) {
+            margin-bottom: 40px;
+
+            @include font28;
+            font-weight: 700;
+        }
     }
 
     &__item {
         margin-bottom: 50px;
+
+        @include font20-light;
 
 
 
@@ -364,12 +674,19 @@
             margin-bottom: 25px;
 
             font-weight: 700;
-            @include font20;
         }
 
         & img {
             display: block;
-            margin: 0 auto;
+            margin: 30px auto 0;
+
+
+
+
+            @include breakpoint($bp-1536) {
+                width: 30%;
+                height: auto;
+            }
         }
     }
 }
@@ -380,12 +697,25 @@
 .question {
     &__title {
         @include title-block;
+        padding: 0 !important;
+
+
+
+        @include breakpoint($tablet) {
+            padding-bottom: 120px;
+        }
     }
 
     &__txt {
         margin-bottom: 30px;
 
         @include font24;
+
+
+
+        @include breakpoint($bp-1280) {
+            @include font20-light;
+        }
     }
 
     & img {
@@ -415,6 +745,11 @@
 
 
 
+    @include breakpoint($bp-1024) {
+		height: fit-content;
+	}
+
+
     &--socials {
         display: flex;
         justify-content: space-between;
@@ -426,10 +761,28 @@
         .socials__item {
             @include social-rect;
         }
+
+        & svg {
+            @include breakpoint($bp-1024) {
+                width: 50px;
+                height: 50px;
+            }
+
+            @include breakpoint($tablet) {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
 
     & img {
         display: block;
         margin: 0 auto;
+
+
+
+        @include breakpoint($bp-1024) {
+            width: 350px;
+        }
     }
 }

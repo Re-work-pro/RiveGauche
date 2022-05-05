@@ -25,6 +25,36 @@
 	font-size: 64px;
 	line-height: 78px;
 	color: $black;
+
+
+
+	@include breakpoint($bp-1536) {
+		@include font48;
+	}
+
+	@include breakpoint($bp-1440) {
+		padding-left: 25px;
+	}
+
+	@include breakpoint($bp-1280) {
+		@include font44;
+	}
+
+	@include breakpoint($bp-1024) {
+		padding-left: 40px;
+		margin-bottom: 30px;
+
+		@include font36;
+	}
+
+	@include breakpoint($tablet) {
+		@include font28;
+		font-weight: 700;
+	}
+
+	@include breakpoint($bp-568) {
+		@include font20;
+	}
 }
 
 @mixin title-rect {
@@ -35,6 +65,22 @@
 	position: absolute;
 	top: 15px;
 	left: 0;
+
+
+
+	@include breakpoint($bp-1536) {
+		top: 3px;
+	}
+
+	@include breakpoint($bp-1024) {
+		width: 60px;
+		height: 40px;
+	}
+
+	@include breakpoint($tablet) {
+		width: 50px;
+		height: 30px;
+	}
 }
 
 @mixin congrats-item {
@@ -90,6 +136,13 @@
 
 	background: $black;
 	border-radius: $b-radius10;
+
+
+
+	@include breakpoint($tablet) {
+		width: 22%;
+		height: 90px;
+	}
 }
 
 @mixin font18 {
@@ -136,6 +189,11 @@
 @mixin font44 {
 	font-size: 44px;
 	line-height: 48px;
+}
+
+@mixin font48 {
+	font-size: 48px;
+	line-height: 52px;
 }
 
 @mixin description-title {

@@ -12,4 +12,8 @@
     @include breakpoint($bp-1024) {
         padding: 0 40px;
     }
+
+    @include breakpoint($tablet) {
+        padding: 0 30px;
+    }
 }

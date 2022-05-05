@@ -1,4 +1,11 @@
 // SLIDER STYLES
+.wrap {
+    @include breakpoint($bp-900) {
+        height: 380px;
+        margin-bottom: 80px;
+    }
+}
+
 .frame {
     width: 100%;
     height: 470px;
@@ -6,6 +13,20 @@
     overflow: hidden;
     padding-left: 120px;
 
+
+
+    @include breakpoint($bp-1440) {
+        padding-left: 100px;
+    }
+
+    @include breakpoint($bp-1280) {
+        height: 440px;
+    }
+
+    @include breakpoint($bp-1024) {
+        height: 340px;
+        padding-left: 40px;
+    }
 
 
     ul.main-news__items-wrapp {
@@ -22,7 +43,7 @@
 
         & li {
             float: left;
-            width: 300px;
+            width: fit-content;
             height: 100%;
             margin: 0 20px;
 
@@ -45,8 +66,27 @@
 
 
 
+                @include breakpoint($bp-1280) {
+                    width: 320px;
+                }
+
+                @include breakpoint($bp-1024) {
+                    width: 245px;
+                }
+
+
                 & .slider__media {
                     transform: scale(0.9083);
+
+
+
+                    @include breakpoint($bp-1280) {
+                        transform: scale(0.85);
+                    }
+
+                    @include breakpoint($bp-1024) {
+                        transform: none;
+                    }
                 }
             }
         }
@@ -75,6 +115,16 @@
     & img {
         display: block;
         margin: 0 auto;
+
+
+
+        @include breakpoint($bp-1280) {
+            width: 270px;
+        }
+
+        @include breakpoint($bp-1024) {
+            width: 200px;
+        }
     }
 }
 
@@ -99,6 +149,12 @@
             @include font20-light;
 
             transition: $transition;
+
+
+
+            @include breakpoint($bp-1024) {
+                @include font18;
+            }
         }
     }
 }
@@ -117,6 +173,15 @@
 
 
 
+    @include breakpoint($bp-1024) {
+        width: 80%;
+    }
+
+    @include breakpoint($bp-900) {
+        margin: 60px auto 0;
+    }
+
+
     .handle {
         width: 100%;
         max-width: 210px;
@@ -129,6 +194,12 @@
         position: absolute;
         top: -1px;
         left: 0;
+
+
+
+        @include breakpoint($bp-1024) {
+            top: -2px;
+        }
     }
 
     .mousearea {

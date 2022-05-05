@@ -3,9 +3,25 @@
 
 
 
+    @include breakpoint($tablet) {
+        padding: 15px 35px;
+    }
+
+
     &--read__more {
         bottom: 55px;
         right: 7px;
+
+
+
+        @include breakpoint($bp-1536) {
+            bottom: 0;
+            right: 0;
+        }
+
+        @include breakpoint($bp-568) {
+            position: unset;
+        }
     }
 
     &--interview {
@@ -21,5 +37,15 @@
     &--catalog {
         bottom: 30px;
         right: 30px;
+
+
+
+        @include breakpoint($tablet) {
+            display: block;
+            width: fit-content;
+            margin: 0 auto;
+
+            position: unset;
+        }
     }
 }
