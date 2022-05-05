@@ -1,37 +1,42 @@
 /* Colors */
 $white: #fff;
 $black: #000;
-$gray: #818181;
-$orange: #FB532A;
-$main-bg: #141414;
-
-
+$red: #EE1C25;
+$pink: #EC008D;
+$orange: #F37020;
+$violet: #AD1F8D;
 
 /* Others */
-$font-inter: 'Inter', sans-serif;
-$border-white: 1px solid #fff;
-$border-orange: 2px solid #FB532A;
-$border-radius: 10px;
-$btn-bg: linear-gradient(93.86deg, #FF9378 -58.73%, #FD3402 124.45%);
-$transition: all .25s linear;
+$main-bg: #f8f8f8;
+$transition: all .25s ease-in-out;
+$box-shadow: 0px 11px 60px -40px #020202;
+$b-top-radius10: 10px 10px 0 0;
+$b-radius10: 10px;
+$b-radius5: 5px;
+$b-radius20: 20px;
+$b-radius30: 30px;
+$b-radius50p: 50%;
+
 
 
 /* Viewport widths */
-$breakpoint-huge: 1920px;
-$breakpoint-5xl: 1664px;
-$breakpoint-4xl: 1536px;
-$breakpoint-3xl: 1440px;
-$breakpoint-2xl: 1368px;
-$breakpoint-xl: 1280px;
-$breakpoint-l: 1024px;
-$breakpoint-sl: 991px;
+$bp-1920: 1920px;
+$bp-1680: 1680px;
+$bp-1536: 1536px;
+$bp-1440: 1440px;
+$bp-1368: 1368px;
+$bp-1280: 1200px;
+$bp-1100: 1100px;
+$bp-1024: 1024px;
+$bp-900: 900px;
 $tablet: 768px;
-$mobile-album: 640px;
-$mobile-l: 568px;
-$mobile-m: 390px;
-$mobile-sm: 360px;
-$mobile-s: 320px;
+$bp-640: 640px;
+$bp-568: 568px;
+$mobile-414: 414px;
+$mobile-393: 393px;
+$mobile-375: 375px;
+$mobile-360: 360px;
+$mobile-320: 320px;
 
 
 /* Viewport height */
-$breakpoint-h: 1024px;

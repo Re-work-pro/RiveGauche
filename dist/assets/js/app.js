@@ -17,10 +17,9 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 // jQuery throttle / debounce - v1.1 - 3/7/2010
 (function(b,c){var $=b.jQuery||b.Cowboy||(b.Cowboy={}),a;$.throttle=a=function(e,f,j,i){var h,d=0;if(typeof f!=="boolean"){i=j;j=f;f=c}function g(){var o=this,m=+new Date()-d,n=arguments;function l(){d=+new Date();j.apply(o,n)}function k(){h=c}if(i&&!h){l()}h&&clearTimeout(h);if(i===c&&m>e){l()}else{if(f!==true){h=setTimeout(i?k:l,i===c?e-m:e)}}}if($.guid){g.guid=j.guid=j.guid||$.guid++}return g};$.debounce=function(d,e,f){return f===c?a(d,e,false):a(d,f,e!==false)}})(this);
 
-// =============
 
 
-// ====== sly slider init !!!
+// sly slider init !!!
 (function () {
 		var $frame = $('#cycleitems');
 		var $wrap  = $frame.parent();
@@ -45,3 +44,23 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 			clickBar: 1,
 		});
 }());
+
+
+
+
+// Description of Products
+$(document).ready(function(){
+
+	$('.slider__item').click(function() {
+		let sliderItem = $(this).attr('id');
+		let product = $('.product').attr('id');
+
+
+		if (sliderItem === product) {
+			$('.product').addClass('show');
+		} else {
+			$('.product').removeClass('show');
+		}
+	})
+
+})

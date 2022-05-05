@@ -1,47 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Montserrat:wght@400;500;700&family=Nova+Flat&display=swap');
-
-
-body {
-
-    &.no-scroll {
-        overflow: hidden;
-    }
-}
-
-
 @import 'constants';
 @import 'mixins';
 @import 'normalize';
 @import 'layout';
-@import 'slider';
 
-
-
-/* ======== Pages Blocks ======== */
-@import 'pages/services-page.scss';
-@import 'pages/web-dev.scss';
-@import 'pages/works-page.scss';
-@import 'pages/opened-project.scss';
-@import 'pages/clients-page.scss';
-@import 'pages/team.scss';
-@import 'pages/contacts-page.scss';
 
 /* ======== Blocks ======== */
 @import 'blocks/main.scss';
-@import 'blocks/modal.scss';
-@import 'blocks/header.scss';
-@import 'blocks/nav.scss';
-@import 'blocks/list-filter.scss';
-@import 'blocks/burger.scss';
-@import 'blocks/hero.scss';
 @import 'blocks/btn.scss';
-@import 'blocks/socials.scss';
-@import 'blocks/about.scss';
-@import 'blocks/services.scss';
-@import 'blocks/works.scss';
-@import 'blocks/reviews.scss';
-@import 'blocks/clients.scss';
-@import 'blocks/blog.scss';
-@import 'blocks/form.scss';
-@import 'blocks/footer.scss';
-@import 'blocks/tags.scss';
+@import 'blocks/slider.scss';
