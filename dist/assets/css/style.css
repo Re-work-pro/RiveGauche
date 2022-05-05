@@ -139,8 +139,21 @@ input {
 }
 
 .container {
-    max-width: 1760px;
+    max-width: 1920px;
+    padding: 0 80px;
     margin: 0 auto;
+}
+
+@media (max-width: 1440px) {
+    .container {
+        padding: 0 60px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 40px;
+    }
 }
 
 /* ======== Blocks ======== */
@@ -165,6 +178,37 @@ input {
     background: #000;
 }
 
+@media (max-width: 1536px) {
+    .hero__txt-content {
+        max-width: 900px;
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        padding: 100px 80px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero__txt-content {
+        max-width: 800px;
+        padding: 80px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__txt-content {
+        max-width: 700px;
+        padding: 70px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero__txt-content {
+        max-width: unset;
+        width: 80%;
+    }
+}
+
 .hero__title {
     max-width: 755px;
     margin-bottom: 16px;
@@ -174,11 +218,42 @@ input {
     color: #fff;
 }
 
+@media (max-width: 1536px) {
+    .hero__title {
+        font-size: 44px;
+        line-height: 48px;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero__title {
+        font-weight: 700;
+        font-size: 36px;
+        line-height: 44px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__title {
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 700;
+    }
+}
+
 .hero__text {
     max-width: 720px;
     font-size: 20px;
     line-height: 24px;
     color: #fff;
+}
+
+@media (max-width: 1024px) {
+    .hero__text {
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 .hero--socials {
@@ -199,6 +274,54 @@ input {
     position: absolute;
     top: 253px;
     right: 330px;
+}
+
+@media (max-width: 1680px) {
+    .hero--socials {
+        right: 7%;
+    }
+}
+
+@media (max-width: 1536px) {
+    .hero--socials {
+        height: 350px;
+        right: 15%;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero--socials {
+        top: 245px;
+    }
+}
+
+@media (max-width: 1100px) {
+    .hero--socials {
+        right: 7%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero--socials {
+        height: -webkit-fit-content;
+        height: -moz-fit-content;
+        height: fit-content;
+        top: 270px;
+        right: 10%;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero--socials a:not(:last-child) {
+        margin-bottom: 10px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero--socials svg {
+        width: 50px;
+        height: 50px;
+    }
 }
 
 .hero__spoilers {
@@ -223,6 +346,57 @@ input {
     text-transform: uppercase;
     color: #fff;
     border-radius: 10px 10px 0 0;
+}
+
+@media (max-width: 1680px) {
+    .hero__spoilers .spoilers__item {
+        max-width: 440px;
+    }
+}
+
+@media (max-width: 1536px) {
+    .hero__spoilers .spoilers__item {
+        max-width: 400px;
+        font-weight: 300;
+        font-size: 28px;
+        line-height: 34px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1368px) {
+    .hero__spoilers .spoilers__item {
+        width: 30%;
+        max-width: unset;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 29px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1280px) {
+    .hero__spoilers .spoilers__item {
+        padding: 40px 40px 50px;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 24px;
+        font-weight: 700;
+    }
+}
+
+@media (max-width: 1024px) {
+    .hero__spoilers .spoilers__item {
+        padding: 30px 30px 40px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero__spoilers .spoilers__item {
+        width: 32%;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
 
 .hero__spoilers .spoilers__item:first-child {
@@ -454,6 +628,14 @@ input {
     line-height: 29px;
 }
 
+.question img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
 .footer {
     width: 100%;
     height: 250px;
@@ -533,7 +715,7 @@ input {
 
 .frame {
     width: 100%;
-    height: 450px;
+    height: 470px;
     line-height: 250px;
     overflow: hidden;
     padding-left: 120px;

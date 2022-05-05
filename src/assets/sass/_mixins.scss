@@ -133,6 +133,11 @@
 	line-height: 44px;
 }
 
+@mixin font44 {
+	font-size: 44px;
+	line-height: 48px;
+}
+
 @mixin description-title {
 	margin-bottom: 80px;
 

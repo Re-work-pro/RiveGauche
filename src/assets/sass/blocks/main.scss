@@ -13,16 +13,60 @@
 
     &__txt-content {
         @include hero__txt-content;
+
+
+
+        @include breakpoint($bp-1536) {
+            max-width: 900px;
+            height: fit-content;
+            padding: 100px 80px;
+        }
+
+        @include breakpoint($bp-1280) {
+            max-width: 800px;
+            padding: 80px;
+        }
+
+        @include breakpoint($bp-1024) {
+            max-width: 700px;
+            padding: 70px;
+        }
+
+        @include breakpoint($bp-900) {
+            max-width: unset;
+            width: 80%;
+        }
     }
 
     &__title {
         @include title-hero;
+
+
+
+        @include breakpoint($bp-1536) {
+            @include font44;
+        }
+
+        @include breakpoint($bp-1280) {
+            @include font36;
+        }
+
+        @include breakpoint($bp-1024) {
+            @include font28;
+            font-weight: 700;
+        }
     }
 
     &__text {
         max-width: 720px;
 
         @include font20-white;
+
+
+
+        @include breakpoint($bp-1024) {
+            @include font18;
+        }
     }
 
     &--socials {
@@ -34,6 +78,46 @@
         position: absolute;
         top: 253px;
         right: 330px;
+
+
+
+        @include breakpoint($bp-1680) {
+            right: 7%;
+        }
+
+        @include breakpoint($bp-1536) {
+            height: 350px;
+            right: 15%;
+        }
+
+        @include breakpoint($bp-1280) {
+            top: 245px;
+        }
+
+        @include breakpoint($bp-1100) {
+            right: 7%;
+        }
+
+        @include breakpoint($bp-1024) {
+            height: fit-content;
+            top: 270px;
+            right: 10%;
+        }
+
+
+
+        & a:not(:last-child) {
+            @include breakpoint($bp-1024) {
+                margin-bottom: 10px;
+            }
+        }
+
+        & svg {
+            @include breakpoint($bp-1024) {
+                width: 50px;
+                height: 50px;
+            }
+        }
     }
 
     &__spoilers {
@@ -45,6 +129,44 @@
 
         .spoilers__item {
             @include spoiler-item;
+
+
+
+            @include breakpoint($bp-1680) {
+                max-width: 440px;
+            }
+
+            @include breakpoint($bp-1536) {
+                max-width: 400px;
+
+                @include font28;
+                font-weight: 700;
+            }
+
+            @include breakpoint($bp-1368) {
+                width: 30%;
+                max-width: unset;
+
+                @include font24;
+                font-weight: 700;
+            }
+
+            @include breakpoint($bp-1280) {
+                padding: 40px 40px 50px;
+
+                @include font20;
+                font-weight: 700;
+            }
+
+            @include breakpoint($bp-1024) {
+                padding: 30px 30px 40px;
+            }
+
+            @include breakpoint($bp-900) {
+                width: 32%;
+
+                @include font18;
+            }
 
 
 
@@ -264,6 +386,13 @@
         margin-bottom: 30px;
 
         @include font24;
+    }
+
+    & img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 }
 
