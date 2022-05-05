@@ -4,6 +4,11 @@
         height: 380px;
         margin-bottom: 80px;
     }
+
+    @include breakpoint($bp-568) {
+        height: 320px;
+        margin-bottom: 100px;
+    }
 }
 
 .frame {
@@ -26,6 +31,11 @@
     @include breakpoint($bp-1024) {
         height: 340px;
         padding-left: 40px;
+    }
+
+    @include breakpoint($bp-568) {
+        height: 310px;
+        padding-left: 20px;
     }
 
 
@@ -72,6 +82,10 @@
 
                 @include breakpoint($bp-1024) {
                     width: 245px;
+                }
+
+                @include breakpoint($bp-568) {
+                    width: 220px;
                 }
 
 
@@ -125,6 +139,10 @@
         @include breakpoint($bp-1024) {
             width: 200px;
         }
+
+        @include breakpoint($bp-568) {
+            width: 180px;
+        }
     }
 }
 
@@ -155,6 +173,11 @@
             @include breakpoint($bp-1024) {
                 @include font18;
             }
+
+            @include breakpoint($bp-568) {
+                font-size: 16px;
+                line-height: 20px;
+            }
         }
     }
 }
@@ -179,6 +202,10 @@
 
     @include breakpoint($bp-900) {
         margin: 60px auto 0;
+    }
+
+    @include breakpoint($bp-568) {
+        margin: 50px auto 0;
     }
 
 

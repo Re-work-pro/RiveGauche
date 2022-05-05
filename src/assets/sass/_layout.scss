@@ -16,4 +16,8 @@
     @include breakpoint($tablet) {
         padding: 0 30px;
     }
+
+    @include breakpoint($mobile-375) {
+        padding: 0 20px;
+    }
 }

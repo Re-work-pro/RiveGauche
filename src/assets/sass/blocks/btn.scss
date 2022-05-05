@@ -8,6 +8,10 @@
     }
 
 
+    &:hover {
+        transform: scale(0.95);
+    }
+
     &--read__more {
         bottom: 55px;
         right: 7px;
@@ -32,6 +36,13 @@
         @include font18;
 
         position: unset;
+
+
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     &--catalog {

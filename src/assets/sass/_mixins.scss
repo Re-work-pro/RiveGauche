@@ -53,7 +53,11 @@
 	}
 
 	@include breakpoint($bp-568) {
+		padding: 0;
+		margin-bottom: 20px;
+
 		@include font20;
+		text-align: center;
 	}
 }
 
@@ -81,6 +85,15 @@
 		width: 50px;
 		height: 30px;
 	}
+
+	@include breakpoint($bp-568) {
+		width: 30px;
+		height: 20px;
+	}
+
+	@include breakpoint($mobile-375) {
+		display: none;
+	}
 }
 
 @mixin congrats-item {
@@ -100,6 +113,7 @@
 
 	background: $black;
 	border-radius: $b-radius5;
+	transition: $transition;
 
 	position: absolute;
 	bottom: 0;
@@ -136,6 +150,8 @@
 
 	background: $black;
 	border-radius: $b-radius10;
+
+	transition: $transition;
 
 
 

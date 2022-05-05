@@ -73,7 +73,7 @@
 
         @include breakpoint($bp-568) {
             width: 100%;
-            padding: 40px;
+            padding: 30px;
         }
     }
 
@@ -166,7 +166,20 @@
             right: 30px;
         }
 
+        @include breakpoint($mobile-375) {
+            width: 40%;
+        }
 
+
+        .socials__item {
+            transition: $transition;
+
+
+
+            &:hover {
+                transform: translateY(-5px);
+            }
+        }
 
         & a:not(:last-child) {
             @include breakpoint($bp-1024) {
@@ -300,6 +313,10 @@
         padding-bottom: 100px;
     }
 
+    @include breakpoint($bp-568) {
+        padding-bottom: 50px;
+    }
+
 
     &__title {
         @include title-block;
@@ -385,7 +402,7 @@
         }
 
         @include breakpoint($bp-568) {
-            margin-bottom: 15px;
+            margin: 0 0 15px;
         }
     }
 
@@ -424,7 +441,7 @@
         @include breakpoint($bp-568) {
             left: 50%;
 
-            transform: translateX(-59%);
+            transform: translateX(-50%);
         }
     }
 
@@ -520,6 +537,10 @@
         padding-bottom: 100px;
     }
 
+    @include breakpoint($bp-568) {
+		padding-bottom: 50px;
+	}
+
 
     &__title {
         @include title-block;
@@ -551,6 +572,15 @@
         @include breakpoint($bp-1024) {
             @include font20-light;
         }
+
+        @include breakpoint($tablet) {
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     & img {
@@ -578,6 +608,14 @@
 
     @include breakpoint($bp-1024) {
         padding-bottom: 120px;
+    }
+
+    @include breakpoint($tablet) {
+        padding-bottom: 80px;
+    }
+
+    @include breakpoint($bp-568) {
+        padding-bottom: 50px;
     }
 
 
@@ -610,6 +648,15 @@
         @include breakpoint($bp-1024) {
             padding-left: 0;
         }
+
+        @include breakpoint($tablet) {
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 }
 
@@ -639,6 +686,10 @@
         padding: 40px 50px;
     }
 
+    @include breakpoint($bp-568) {
+        padding: 20px;
+    }
+
 
     &.show {
         display: block;
@@ -657,6 +708,18 @@
             @include font28;
             font-weight: 700;
         }
+
+        @include breakpoint($bp-568) {
+            margin-bottom: 20px;
+
+            @include font24;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        @include breakpoint($mobile-375) {
+            @include font20;
+        }
     }
 
     &__item {
@@ -674,6 +737,12 @@
             margin-bottom: 25px;
 
             font-weight: 700;
+
+
+
+            @include breakpoint($bp-568) {
+                display: none;
+            }
         }
 
         & img {
@@ -687,6 +756,17 @@
                 width: 30%;
                 height: auto;
             }
+        }
+    }
+
+    &__description {
+        @include breakpoint($tablet) {
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            font-size: 16px;
+            line-height: 20px;
         }
     }
 }
@@ -716,6 +796,19 @@
         @include breakpoint($bp-1280) {
             @include font20-light;
         }
+
+        @include breakpoint($tablet) {
+            margin-bottom: 20px;
+
+            @include font18;
+        }
+
+        @include breakpoint($bp-568) {
+            margin-bottom: 10px;
+
+            font-size: 16px;
+            line-height: 20px;
+        }
     }
 
     & img {
@@ -723,6 +816,13 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
+
+
+
+        @include breakpoint($bp-568) {
+            height: 100px;
+            object-fit: unset;
+        }
     }
 }
 
@@ -758,8 +858,28 @@
 
 
 
+        @include breakpoint($tablet) {
+            margin: 60px 0;
+        }
+
+        @include breakpoint($bp-568) {
+            margin: 30px 0;
+        }
+
+
         .socials__item {
             @include social-rect;
+
+
+
+            @include breakpoint($bp-568) {
+                height: 60px;
+            }
+
+
+            &:hover {
+                transform: translateY(-5px);
+            }
         }
 
         & svg {
@@ -772,6 +892,11 @@
                 width: 40px;
                 height: 40px;
             }
+
+            @include breakpoint($bp-568) {
+                width: 30px;
+                height: 30px;
+            }
         }
     }
 
@@ -783,6 +908,10 @@
 
         @include breakpoint($bp-1024) {
             width: 350px;
+        }
+
+        @include breakpoint($bp-568) {
+            width: 200px;
         }
     }
 }
