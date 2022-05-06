@@ -16,7 +16,9 @@
 
 
     &__logo {
-        width: fit-content;
+        display: block;
+        width: 120px;
+        height: 120px;
         margin: 0 auto 60px;
 
 
@@ -35,8 +37,6 @@
 
 
         & img {
-            width: 100%;
-            height: 100%;
             object-fit: cover;
         }
     }
@@ -212,7 +212,6 @@
         }
 
         @include breakpoint($bp-568) {
-            height: 220px;
             margin-top: 30px;
             flex-direction: column;
             align-items: center;
@@ -271,6 +270,7 @@
             @include breakpoint($bp-568) {
                 width: 100%;
                 padding: 20px;
+                margin-bottom: 10px;
 
                 border-radius: $b-radius10;
 
@@ -647,6 +647,7 @@
 
         @include breakpoint($bp-1024) {
             padding-left: 0;
+            margin-bottom: 50px;
         }
 
         @include breakpoint($tablet) {
@@ -654,6 +655,8 @@
         }
 
         @include breakpoint($bp-568) {
+            margin-bottom: 30px;
+
             font-size: 16px;
             line-height: 20px;
         }
@@ -915,3 +918,29 @@
         }
     }
 }
+
+
+
+
+// Modals
+.modal-fullscreen {
+    width: 100%;
+}
+
+.modal-fullscreen .modal-content {
+    height: unset;
+}
+
+.question {
+    @include font24;
+    font-weight: 700;
+}
+
+.answer {
+    @include font24;
+}
+
+.img {
+    box-shadow: $box-shadow;
+}
+

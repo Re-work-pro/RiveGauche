@@ -227,6 +227,11 @@
         @include breakpoint($bp-1024) {
             top: -2px;
         }
+
+        @include breakpoint($bp-568) {
+            width: 31%;
+            max-width: unset;
+        }
     }
 
     .mousearea {

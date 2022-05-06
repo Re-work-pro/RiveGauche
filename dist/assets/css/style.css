@@ -19,6 +19,7 @@ body {
     width: 100%;
     height: 100%;
     cursor: default;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -187,9 +188,9 @@ input {
 }
 
 .hero__logo {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    display: block;
+    width: 120px;
+    height: 120px;
     margin: 0 auto 60px;
 }
 
@@ -209,8 +210,6 @@ input {
 }
 
 .hero__logo img {
-    width: 100%;
-    height: 100%;
     -o-object-fit: cover;
     object-fit: cover;
 }
@@ -465,7 +464,6 @@ input {
 
 @media (max-width: 568px) {
     .hero__spoilers {
-        height: 220px;
         margin-top: 30px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
@@ -559,6 +557,7 @@ input {
     .hero__spoilers .spoilers__item {
         width: 100%;
         padding: 20px;
+        margin-bottom: 10px;
         border-radius: 10px;
     }
 
@@ -1276,6 +1275,7 @@ input {
 @media (max-width: 1024px) {
     .gift-ideas__description {
         padding-left: 0;
+        margin-bottom: 50px;
     }
 }
 
@@ -1288,6 +1288,7 @@ input {
 
 @media (max-width: 568px) {
     .gift-ideas__description {
+        margin-bottom: 30px;
         font-size: 16px;
         line-height: 20px;
     }
@@ -1642,6 +1643,31 @@ input {
     }
 }
 
+.modal-fullscreen {
+    width: 100%;
+}
+
+.modal-fullscreen .modal-content {
+    height: unset;
+}
+
+.question {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+    font-weight: 700;
+}
+
+.answer {
+    font-weight: 300;
+    font-size: 24px;
+    line-height: 29px;
+}
+
+.img {
+    box-shadow: 0px 11px 60px -40px #020202;
+}
+
 .btn {
     padding: 15px 48.5px;
     font-weight: 500;
@@ -1978,6 +2004,13 @@ input {
 @media (max-width: 1024px) {
     .scrollbar .handle {
         top: -2px;
+    }
+}
+
+@media (max-width: 568px) {
+    .scrollbar .handle {
+        width: 31%;
+        max-width: unset;
     }
 }
 
