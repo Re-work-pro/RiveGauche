@@ -1810,7 +1810,7 @@ input {
 .interview__img {
     max-width: 565px;
     max-height: 829px;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 
 @media (max-width: 568px) {
