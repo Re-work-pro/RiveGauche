@@ -41,6 +41,8 @@
 
 
         & img {
+            width: 100%;
+            height: 100%;
             object-fit: cover;
         }
     }
@@ -719,9 +721,7 @@
         @include breakpoint($bp-568) {
             margin-bottom: 20px;
 
-            @include font24;
-            font-weight: 700;
-            text-align: center;
+            @include font20;
         }
 
         @include breakpoint($mobile-375) {
@@ -748,7 +748,7 @@
 
 
             @include breakpoint($bp-568) {
-                display: none;
+
             }
         }
 
@@ -760,7 +760,7 @@
 
 
             @include breakpoint($bp-1536) {
-                width: 30%;
+                width: 60%;
                 height: auto;
             }
         }
