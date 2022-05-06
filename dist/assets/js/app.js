@@ -55,20 +55,8 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 		});
 }());
 
-<<<<<<< HEAD
 
 
-
-
-=======
-// Description of Products
-/* $(document).ready(function(){
-
-	$('.slider__item').each(function() {
-		console.log($(this).attr('id'));
-	})
-}) */
->>>>>>> 1cd20f48a20bd7593be9072972a8dda3dfd24c26
 
 const body = document.querySelector('body');
 const modalBtn = document.querySelectorAll('[data-modal]');
