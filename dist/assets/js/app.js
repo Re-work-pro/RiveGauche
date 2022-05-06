@@ -25,7 +25,7 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 		var $wrap  = $frame.parent();
 
 		// Call Sly on frame
-		$frame.sly({
+		var slider = new Sly($frame, {
 			horizontal: 1,
 			itemNav: 'basic',
 			smart: 1,
@@ -42,6 +42,15 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 			dragHandle: 1,
 			dynamicHandle: 1,
 			clickBar: 1,
+		}).init();
+
+		$frame.sly('on', 'active', function(eventName, itemIndex) {
+			console.log(slider.items[itemIndex]);  // Sly position object
+			let items = document.querySelectorAll('.product[data-id]');
+			items.forEach(item => {
+				item.classList.remove('show');
+			});
+			document.querySelector('.product[data-id="' + slider.items[itemIndex].el.id + '"]').classList.add('show');
 		});
 }());
 
@@ -49,9 +58,9 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 
 
 // Description of Products
-$(document).ready(function(){
+/* $(document).ready(function(){
 
 	$('.slider__item').each(function() {
 		console.log($(this).attr('id'));
 	})
-})
+}) */
