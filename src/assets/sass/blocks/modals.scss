@@ -1,0 +1,270 @@
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    overflow: scroll;
+
+    background: $white;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+
+
+    &.show {
+        display: block;
+    }
+
+    &__close {
+        width: 40px;
+        height: 40px;
+
+        position: absolute;
+        top: 30px;
+        right: 30px;
+
+        transition: $transition;
+        cursor: pointer;
+        z-index: 100;
+
+
+
+
+        @include breakpoint($bp-1536) {
+            width: 30px;
+            height: 30px;
+        }
+
+        @include breakpoint($tablet) {
+            top: 20px;
+            right: 20px;
+        }
+
+        @include breakpoint($bp-568) {
+            width: 20px;
+            height: 20px;
+        }
+
+
+        &:hover {
+            transform: rotate(180deg);
+        }
+
+        & svg {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__content {
+        &.interview--content {
+            padding: 80px 200px;
+
+
+
+            @include breakpoint($bp-1536) {
+                padding: 80px 120px;
+            }
+
+            @include breakpoint($bp-1280) {
+                padding: 80px;
+            }
+
+            @include breakpoint($bp-900) {
+                padding: 80px 60px;
+            }
+
+            @include breakpoint($tablet) {
+                padding: 80px 40px 50px;
+            }
+
+            @include breakpoint($bp-568) {
+                padding: 60px 30px 0;
+            }
+
+            @include breakpoint($mobile-375) {
+                padding: 60px 20px 0;
+            }
+        }
+    }
+}
+
+.interview__title {
+    margin-bottom: 40px;
+
+    font-size: 50px;
+    line-height: 61px;
+
+
+
+    @include breakpoint($bp-1368) {
+        @include font44;
+    }
+
+    @include breakpoint($bp-1280) {
+        @include font36;
+    }
+
+    @include breakpoint($bp-1024) {
+        font-size: 32px;
+        line-height: 36px;
+    }
+
+    @include breakpoint($tablet) {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+    @include breakpoint($bp-568) {
+        margin-bottom: 20px;
+
+        @include font20;
+    }
+
+    @include breakpoint($mobile-320) {
+        @include font18;
+    }
+
+
+    & br {
+        @include breakpoint($bp-568) {
+            display: none;
+        }
+    }
+}
+
+.interview__img {
+    max-width: 565px;
+    max-height: 829px;
+    margin-bottom: 50px;
+
+
+
+    @include breakpoint($bp-568) {
+        margin-bottom: 20px;
+    }
+
+
+    &:nth-child(3) {
+        max-width: 1037px;
+        max-height: 687px;
+    }
+
+    &:nth-child(4) {
+        max-width: 734px;
+        max-height: 1100px;
+    }
+
+    &.main--img {
+        max-width: 1520px;
+        max-height: 750px;
+    }
+
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+
+.interview__txt {
+    margin-bottom: 120px;
+
+    @include font24;
+    font-weight: 400;
+
+
+
+    @include breakpoint($bp-1024) {
+        @include font20;
+        font-weight: 400;
+    }
+
+    @include breakpoint($tablet) {
+        margin-bottom: 80px;
+
+        @include font18;
+    }
+
+    @include breakpoint($bp-568) {
+        margin-bottom: 50px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @include breakpoint($mobile-320) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+
+
+    & p:not(:last-child) {
+        margin-bottom: 30px;
+
+
+
+
+        @include breakpoint($bp-568) {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+.question-answer {
+    margin-bottom: 50px;
+
+
+
+    @include breakpoint($bp-568) {
+        margin-bottom: 30px;
+    }
+}
+
+.question {
+    margin-bottom: 20px;
+
+    @include font20;
+
+
+
+
+    @include breakpoint($tablet) {
+        @include font18;
+    }
+
+    @include breakpoint($bp-568) {
+        margin-bottom: 10px;
+
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @include breakpoint($mobile-320) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}
+
+.answer {
+    @include font20-light;
+
+
+
+    @include breakpoint($tablet) {
+        @include font18;
+    }
+
+    @include breakpoint($bp-568) {
+        font-size: 16px;
+        line-height: 20px;
+    }
+
+    @include breakpoint($mobile-320) {
+        font-size: 14px;
+        line-height: 18px;
+    }
+}

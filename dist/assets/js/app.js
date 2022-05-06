@@ -48,10 +48,38 @@ b*(7.5625*(a-=2.25/2.75)*a+0.9375)+c:b*(7.5625*(a-=2.625/2.75)*a+0.984375)+c},ea
 
 
 
-// Description of Products
-$(document).ready(function(){
 
-	$('.slider__item').each(function() {
-		console.log($(this).attr('id'));
-	})
-})
+
+const body = document.querySelector('body');
+const modalBtn = document.querySelectorAll('[data-modal]');
+const modalClose = document.querySelectorAll('.modal__close');
+const modal = document.querySelectorAll('.modal');
+
+
+
+modalBtn.forEach(item => {
+    item.addEventListener('click', event => {
+        let $this = event.currentTarget;
+        let modalId = $this.getAttribute('data-modal');
+        let modal = document.getElementById(modalId);
+
+
+        modal.classList.add('show');
+		body.classList.add('no-scroll');
+    });
+});
+
+
+
+modalClose.forEach(item => {
+
+    item.addEventListener('click', event => {
+        let currentModal = event.currentTarget.closest('.modal');
+
+        setTimeout(() => {
+			currentModal.classList.remove('show');
+			body.classList.remove('no-scroll');
+		}, 300);
+    });
+
+});
